@@ -18,7 +18,7 @@ public class App {
         String textForClient1 = template.formatted(1, "smartphone", days1, sales1, salesByDay1);
         String textForClient2 = template.formatted(2, "laptop", days2, sales2, salesByDay2);
 
-        System.out.println(textForClient1);
-        System.out.println(textForClient2);
+        System.out.printf(textForClient1);
+        System.out.printf(textForClient2);
     }
 }
