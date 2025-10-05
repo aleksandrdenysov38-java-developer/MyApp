@@ -6,7 +6,7 @@ public class app {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter your salary please");
-        double salary = scanner.nextInt();
+        double salary = scanner.nextDouble();
 
         if (salary >0 && salary <= 10000) {
             double tax1 = salary * 0.025;
