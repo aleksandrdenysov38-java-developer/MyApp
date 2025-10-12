@@ -1,10 +1,20 @@
 package lesson7;
+import java.sql.SQLOutput;
 import java.util.Arrays;
+import java.util.Random;
 
 public class array {
     public static void main(String[] args) {
-        //    int[] myArray = new int[20];
-        int[] myArray = {34, -10, 56, -22, 78, 5, 7, -15, 42, -30, 91, 0, -50, 18, 99, -3, 25, 11, 63, -8};
+            int[] myArray = new int[20];
+            Random random = new Random();
+            int min = -100;
+            int max = 100;
+            for (int i = 0; i < myArray.length; i++) {
+                myArray[i] = random.nextInt(max - min + 1) + min;
+            }
+        System.out.println("Элементы массива: " + Arrays.toString(myArray));
+
+      //  int[] myArray = {34, -10, 56, -22, 78, 5, 7, -15, 42, -30, 91, 0, -50, 18, 99, -3, 25, 11, 63, -8};
         int sumOfNegatives = Arrays.stream(myArray).filter(number -> number < 0).sum();
         System.out.println("Сумма отрицательных чисел: " + sumOfNegatives);
 
